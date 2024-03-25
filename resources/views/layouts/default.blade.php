@@ -6,22 +6,36 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>BITLIST - Decentralized crypto platform</title>
+    <title>BITLIST - Decentralized crypto platform.</title>
 
     <script src="{{ asset('/assets/js/alpine-screen.min.js') }}" defer></script>
     <script src="{{ asset('/assets/js/alpine.min.js') }}" defer></script>
     @vite(['resources/js/app.js'])
+
+    <link rel="shortcut icon" href="{{ asset('assets/img/logo-mini.svg') }}" type="image/x-icon"/>
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org/",
+          "@type": "Site",
+          "name": "BITLiST",
+          "author": {
+            "@type": "Person",
+            "name": "n3xus"
+          },
+          "description": "BITLIST - Decentralized crypto platform.",
+        }
+    </script>
 </head>
 <body>
 
-<div class="mx-4 1600:mx-24"
-     x-data="{
+<div x-data="{
         window_width: window.innerWidth,
         mobile_navigation: false
      }"
      x-on:resize.window="window_width = window.innerWidth"
 >
-    <header class="relative w-full h-[96px] flex justify-between gap-4 items-center">
+    <header class="relative w-full h-[96px] flex justify-between gap-4 items-center z-50 bg-[#08090B] px-4 1600:px-24">
 
         <div class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-[#40C1FB]/0 via-[#40C1FB] to-[#40C1FB]/0"></div>
 
@@ -39,26 +53,26 @@
 
             <span class="h-[24px] w-[1px] bg-[#252C41]"></span>
 
-            <div class="hidden 770:block group">
-                <img src="{{ asset('assets/img/icons/search-lg.svg') }}"
+            <form class="hidden 770:block group">
+                <img src="{{ asset('/assets/img/icons/search-lg.svg') }}"
                      alt=""
-                     class="absolute left-[16px] top-1/2 -translate-y-1/2 text-[20px]"
+                     class="absolute left-[16px] top-1/2 -translate-y-1/2 w-[20px]"
                 />
 
                 <input type="text"
                        class="default"
                        placeholder="Search"
                 />
-            </div>
+            </form>
         </div>
 
-        <div class="h-full justify-end gap-8 items-center hidden 770:flex">
+        <div class="h-full justify-end gap-8 items-center hidden 770:flex" :aria-hidden="!window_width < 770">
             <nav class="desktop">
-                <a href="#" class="item" x-show="window_width >= 840">Trade</a>
-                <a href="#" class="item" x-show="window_width >= 910">P2P</a>
-                <a href="#" class="item" x-show="window_width >= 1010">Partners</a>
-                <a href="#" class="item" x-show="window_width >= 1100">Mining</a>
-                <a href="#" class="item" x-show="window_width >= 1160">Academy</a>
+                <a href="#" class="item" x-show="window_width >= 840" :aria-hidden="!window_width >= 840">Trade</a>
+                <a href="#" class="item" x-show="window_width >= 910" :aria-hidden="!window_width >= 910">P2P</a>
+                <a href="#" class="item" x-show="window_width >= 1010" :aria-hidden="!window_width >= 1010">Partners</a>
+                <a href="#" class="item" x-show="window_width >= 1100" :aria-hidden="!window_width >= 1100">Mining</a>
+                <a href="#" class="item" x-show="window_width >= 1160" :aria-hidden="!window_width >= 1160">Academy</a>
 
                 <div class="relative flex items-center"
                      x-show="window_width < 1160"
@@ -81,6 +95,7 @@
                          x-transition.origin.right
                          x-transition.duration.150ms
                          @click.outside="show = false"
+                         :aria-hidden="show"
                     >
                         <a href="#" class="item" x-show="window_width < 840">Trade</a>
                         <a href="#" class="item" x-show="window_width < 910">P2P</a>
@@ -112,9 +127,11 @@
     </header>
 
     <div id="mobile__navigation"
-         x-show="mobile_navigation"
+         x-show="mobile_navigation && window_width < 770"
          x-transition.origin.right
          x-transition.duration.200ms
+         style="display: none"
+         class="z-[51]"
     >
         <div class="flex flex-col gap-4 px-4">
 
