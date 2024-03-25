@@ -16,7 +16,7 @@
                 </span>
             </p>
 
-            <h2 class="text-[32px] 600:text-[52px] 770:text-[72px] font-medium text-[#D5EAFF] leading-[40px] 600:leading-[55px] 770:leading-[80px] mx-auto 1370:mx-0 mb-16">
+            <h2 class="text-[32px] 600:text-[52px] 770:text-[72px] font-medium text-[#D5EAFF] leading-[40px] 600:leading-[55px] 770:leading-[80px] mx-auto 1370:mx-0 mb-[5rem]">
                 <span class="770:text-nowrap">
                     Buy, trade and store
                 </span>
@@ -43,14 +43,12 @@
             </div>
         </div>
 
-        <div class="w-full relative hero__right mr-4 1600:mr-24 hidden 1370:block">
+        <div class="w-full relative hero__right mr-24 hidden 1370:block">
             <img src="{{ asset('/assets/img/hero_illustration.svg') }}"
                  alt=""
                  class="absolute -top-[40px] 1500:-top-[55px] 1660:-top-[110px] overflow-hidden -right-[70px] 1500:-right-[95px] z-[0]"
             />
         </div>
-
-        <div class="absolute bottom-0 left-0 w-full bg-[#0B0F15] py-2.5 border-t border-t-[#252C41] z-[5]"></div>
     </section>
 
     <section id="section-assets" class="assets px-4 1370:px-24">

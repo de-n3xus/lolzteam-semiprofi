@@ -15,7 +15,7 @@
 
 @layer base {
     body {
-        @apply bg-[#0B0F15] font-inter overflow-x-hidden;
+        @apply bg-[#0B0F15] font-inter;
     }
 
     * {
@@ -82,6 +82,11 @@
 
     .hero {
         @apply mt-[90px] relative;
+
+        &:after {
+            content: "";
+            @apply absolute bottom-0 left-0 w-full bg-[#0B0F15] py-2.5 border-t border-t-[#252C41] z-[5];
+        }
 
         .hero__decentralized_platform {
             @apply text-[13px] 360:text-[14px] 600:text-[16px] flex justify-start gap-2 items-center text-[#4ACDFE] uppercase px-[12px] py-[8px] rounded-[6px]
