@@ -1,5 +1,5 @@
 @layer components {
-    .hero {
+    section.hero {
         @apply mt-[90px] relative;
 
         &:after {
@@ -20,8 +20,8 @@
             &:after {
                 content: "";
                 @apply absolute bottom-0 left-0 bg-[#1EA0FF]/[.2]
-                w-full max-w-[780px] h-full max-h-[90px]
-                blur-[200px] z-[-1] rounded-full overflow-hidden
+                       w-full max-w-[780px] h-full max-h-[90px]
+                       blur-[200px] z-[-1] rounded-full overflow-hidden
                 ;
             }
         }

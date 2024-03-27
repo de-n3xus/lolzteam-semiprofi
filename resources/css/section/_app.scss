@@ -1,0 +1,28 @@
+@layer components {
+    section.app {
+        @apply flex justify-between gap-4 flex-nowrap w-full bg-[#08090B] py-[100px] border-y border-[#252C41] relative;
+        &:before {
+            content: "";
+            @apply bg-[#39B8FF]/[.15] blur-[100px] w-full max-w-[360px] h-[130px]
+            absolute top-0 left-0;
+            ;
+        }
+
+        .left {
+            @apply flex flex-col gap-4 w-1/2;
+        }
+
+        .right {
+            @apply flex justify-end gap-[80px] w-1/2;
+
+            .box {
+                &:after {
+                    content: "";
+                    @apply bg-gradient-to-b from-[#00E6F4]/70 to-[#00E6F4]/0 blur-[100px] w-[280px] h-[130px] -rotate-[50deg]
+                           absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 rounded-full
+                    ;
+                }
+            }
+        }
+    }
+}

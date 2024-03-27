@@ -35,14 +35,15 @@
         })
     </script>
 </head>
-<body>
-
-<div x-data="{
+<body x-data="{
         window_width: window.innerWidth,
         mobile_navigation: false
-     }"
-     x-on:resize.window="window_width = window.innerWidth"
+      }"
+      x-on:resize.window="window_width = window.innerWidth"
+      :class="{ 'overflow-hidden': mobile_navigation }"
 >
+
+<div class="wrapper">
     <header class="relative w-full h-[96px] flex justify-between gap-4 items-center z-50 bg-[#08090B] px-4 1600:px-24">
 
         <div class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-[#40C1FB]/0 via-[#40C1FB] to-[#40C1FB]/0"></div>
