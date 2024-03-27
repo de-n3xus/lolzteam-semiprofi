@@ -1,0 +1,14 @@
+@layer components {
+    .group {
+        @apply relative;
+
+        input {
+            &.default {
+                @apply bg-gradient-to-b from-primary-gradient-from to-primary-gradient-to pl-[44px] pr-[24px] text-white;
+                @apply placeholder-[#6D799C] border-t border-[#3D4865] h-[36px] 600:h-[42px] rounded-[6px];
+                @apply appearance-none outline-none font-medium;
+                @apply min-w-[280px] 1430:min-w-[400px] text-[14px] 600:text-[18px];
+            }
+        }
+    }
+}

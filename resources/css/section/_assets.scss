@@ -1,0 +1,86 @@
+@layer components {
+    .assets {
+        @apply bg-[#0B0F15] w-full py-[100px] mt-0 relative z-[1];
+
+        .assets__table {
+            @apply bg-[#0F151E] rounded-[16px] w-full border-separate border border-[#222D3E];
+
+            thead {
+                tr {
+                    th {
+                        @apply text-[#6D799C] text-[16px] font-medium py-4;
+
+                        &:first-child {
+                            @apply pl-4;
+                        }
+                        &:last-child {
+                            @apply pr-4;
+                        }
+                    }
+                }
+            }
+
+            tbody {
+                @apply text-[16px] text-[#C7E1FF];
+
+                tr {
+                    @apply relative font-normal;
+
+                    &:before {
+                        content: "";
+                        @apply absolute top-0 left-0 w-full h-[1px] bg-[#222D3E];
+                    }
+
+                    td {
+                        @apply py-4;
+
+                        &:first-child {
+                            @apply pt-5;
+                        }
+
+                        @apply px-4;
+
+                        &:not(:first-child) {
+                            span {
+                                @apply flex justify-center items-center;
+                            }
+                        }
+
+                        &.icon {
+                            @apply flex justify-start items-center gap-4 w-full max-w-[60%];
+
+                            img {
+                                @apply w-[36px] h-[36px];
+                            }
+                        }
+
+                        &.price, &.change {
+                            @apply text-nowrap;
+                        }
+
+                        &.change {
+                            .bad {
+                                @apply text-[#F94B55];
+                            }
+                            .good {
+                                @apply text-[#58F0A7];
+                            }
+                        }
+
+                        &.button {
+                            span {
+                                @apply flex justify-center items-center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .all-assets_btn {
+            @apply bg-gradient-to-b from-primary-gradient-from to-primary-gradient-to hover:opacity-75
+            w-full text-[18px] font-medium text-[#CEE7FF] my-4 rounded-[8px] py-2 transition ease-linear
+            ;
+        }
+    }
+}

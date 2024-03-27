@@ -1,0 +1,39 @@
+@layer components {
+    .hero {
+        @apply mt-[90px] relative;
+
+        &:after {
+            content: "";
+            @apply absolute bottom-0 left-0 w-full bg-[#0B0F15] py-2.5 border-t border-t-[#252C41] z-[5];
+        }
+
+        .hero__decentralized_platform {
+            @apply text-[13px] 360:text-[14px] 600:text-[16px] flex justify-start gap-2 items-center text-[#4ACDFE] uppercase px-[12px] py-[8px] rounded-[6px]
+            bg-gradient-to-r from-[#131A2E] to-[#111624] border-t border-[#3D4865] w-fit font-semibold
+            ;
+        }
+
+        .hero__left {
+            @apply flex flex-col gap-6 max-w-full 1370:max-w-[700px] ml-4 1600:ml-24 mr-4 1370:mr-0 justify-center w-full 1370:justify-start;
+            @apply relative;
+
+            &:after {
+                content: "";
+                @apply absolute bottom-0 left-0 bg-[#1EA0FF]/[.2]
+                w-full max-w-[780px] h-full max-h-[90px]
+                blur-[200px] z-[-1] rounded-full overflow-hidden
+                ;
+            }
+        }
+
+        .hero__right {
+            &:before {
+                content: "";
+                @apply absolute -top-[110px] left-1/2 -translate-x-1/2 bg-[#1EA0FF]/[.2]
+                w-full max-w-[780px] h-full max-h-[180px]
+                blur-[400px] z-[1] rounded-full
+                ;
+            }
+        }
+    }
+}

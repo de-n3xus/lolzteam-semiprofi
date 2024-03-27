@@ -10,6 +10,8 @@
 
     <script src="{{ asset('/assets/js/alpine-screen.min.js') }}" defer></script>
     <script src="{{ asset('/assets/js/alpine.min.js') }}" defer></script>
+    <script src="{{ asset('/assets/js/axios.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/lscache.min.js') }}"></script>
     @vite(['resources/js/app.js'])
 
     <link rel="shortcut icon" href="{{ asset('assets/img/logo-mini.svg') }}" type="image/x-icon"/>
@@ -25,6 +27,12 @@
           },
           "description": "BITLIST - Decentralized crypto platform.",
         }
+    </script>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            const axios = window.axios
+        })
     </script>
 </head>
 <body>

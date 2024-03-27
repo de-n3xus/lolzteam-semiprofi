@@ -1,0 +1,16 @@
+@layer components {
+    button.btn {
+        @apply h-[36px] 600:h-[42px] px-[24px] py-[10px] text-center text-[18px] font-medium rounded-[6px] flex justify-center items-center;
+        @apply hover:opacity-75 transition ease-in-out duration-300;
+
+        &.primary {
+            @apply bg-gradient-to-b from-primary-gradient-from to-primary-gradient-to text-[#CEE7FF];
+        }
+        &.secondary {
+            @apply bg-gradient-to-b from-secondary-gradient-from to-secondary-gradient-to text-[#08090B];
+        }
+        &.secondary-nobg {
+            @apply border border-[#2FBDFC] text-[#2FBDFC];
+        }
+    }
+}
