@@ -1,0 +1,17 @@
+@layer components {
+    aside.admin {
+        @apply border-r border-zinc-800 p-4;
+
+        nav {
+            @apply flex flex-col gap-1;
+
+            .item {
+                @apply hover:bg-zinc-800 px-2 py-1 w-fit rounded-lg text-white/80 hover:text-white/60;
+
+                &.active {
+                    @apply bg-zinc-800;
+                }
+            }
+        }
+    }
+}

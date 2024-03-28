@@ -8,13 +8,7 @@
 
     <title>BITLIST - Decentralized crypto platform.</title>
 
-    <script src="{{ asset('/assets/js/alpine-screen.min.js') }}" defer></script>
-    <script src="{{ asset('/assets/js/alpine.min.js') }}" defer></script>
-    <script src="{{ asset('/assets/js/axios.min.js') }}"></script>
-    <script src="{{ asset('/assets/js/lscache.min.js') }}"></script>
-    @vite(['resources/js/app.js'])
-
-    <link rel="shortcut icon" href="{{ asset('assets/img/logo-mini.svg') }}" type="image/x-icon"/>
+    @include('includes.assets')
 
     <script type="application/ld+json">
         {
@@ -44,12 +38,14 @@
 >
 
 <div class="wrapper">
-    <x-header />
-    <x-mobile-navigation />
+    <div id="app">
+        <x-header />
+        <x-mobile-navigation />
 
-    <div id="app">@yield('content')</div>
+        @yield('content')
 
-    <x-footer />
+        <x-footer />
+    </div>
 </div>
 
 </body>

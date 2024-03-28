@@ -19,6 +19,12 @@
                 <button class="btn secondary absolute right-0 top-0 !px-[18px] 360:!px-[24px]">
                     Sign in
                 </button>
+
+                {{--       для чего это вообще?        --}}
+                <img src="{{ asset('/assets/img/logo-1.svg') }}"
+                     alt="IDK"
+                     class="absolute -bottom-28 left-8"
+                />
             </form>
         </div>
     </section>

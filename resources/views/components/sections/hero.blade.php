@@ -22,7 +22,7 @@
             </h2>
 
             <div class="absolute bottom-0 left-1/2 -translate-x-1/2 1370:-translate-x-0 1370:left-0 z-[6]">
-                <form class="group w-fit">
+                <form class="group w-fit" action="/login">
                     <img src="{{ asset('/assets/img/icons/mail-02.svg') }}"
                          alt=""
                          class="absolute left-[10px] 360:left-[16px] top-1/2 -translate-y-1/2 w-[20px]"
@@ -31,6 +31,7 @@
                     <input type="email"
                            class="default !min-w-[280px] 360:!min-w-[300px] 600:!min-w-[400px] !pl-[36px] 360:!pl-[44px]"
                            placeholder="Example@gmail.com"
+                           name="_email"
                     />
 
                     <button class="btn secondary absolute right-0 top-0 !px-[18px] 360:!px-[24px]">

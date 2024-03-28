@@ -70,8 +70,8 @@
             <span class="h-[24px] w-[1px] bg-[#252C41]"></span>
 
             <div class="flex justify-end items-center gap-3">
-                <button class="btn primary">Register</button>
-                <button class="btn secondary">Log in</button>
+                <button class="btn primary" @click.prevent="await swup.navigate('/register')">Register</button>
+                <button class="btn secondary" @click.prevent="await swup.navigate('/login')">Log in</button>
             </div>
         </div>
 
