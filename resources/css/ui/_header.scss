@@ -1,0 +1,8 @@
+@layer components {
+    header {
+        &:before {
+            content: "";
+            @apply absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-[#40C1FB]/0 via-[#40C1FB] to-[#40C1FB]/0;
+        }
+    }
+}

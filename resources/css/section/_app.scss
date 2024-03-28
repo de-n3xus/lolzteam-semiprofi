@@ -1,6 +1,9 @@
 @layer components {
     section.app {
-        @apply flex justify-between gap-4 flex-nowrap w-full bg-[#08090B] py-[100px] border-y border-[#252C41] relative;
+        @apply flex flex-col 1550:flex-row justify-center 1550:justify-between gap-24 flex-nowrap
+               w-full bg-[#08090B] py-[100px] border-t border-[#252C41] relative
+        ;
+
         &:before {
             content: "";
             @apply bg-[#39B8FF]/[.15] blur-[100px] w-full max-w-[360px] h-[130px]
@@ -9,11 +12,17 @@
         }
 
         .left {
-            @apply flex flex-col gap-4 w-1/2;
+            @apply flex flex-col gap-4 max-w-[550px] 1550:max-w-[50%] w-full mx-auto 1550:mx-0;
+
+            h3 {
+                @apply text-[32px] 420:text-[36px] 540:text-[48px] font-medium text-[#D5EAFF]
+                       leading-[46px] 420:leading-[50px] 540:leading-[64px]
+                ;
+            }
         }
 
         .right {
-            @apply flex justify-end gap-[80px] w-1/2;
+            @apply flex justify-center 1150:justify-end gap-[80px] w-full 1150:w-1/2 mx-auto 1550:mx-0;
 
             .box {
                 &:after {
