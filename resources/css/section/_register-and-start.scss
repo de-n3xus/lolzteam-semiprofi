@@ -1,0 +1,26 @@
+@layer components {
+    section.register-and-start {
+        @apply py-[100px] border-b border-[#252C41] px-4 bg-[#08090B] overflow-hidden;
+
+        .wrapper {
+            @apply max-w-[700px] w-full mx-auto text-center flex flex-col gap-[56px] relative z-[1];
+
+            &:before {
+                content: "";
+                @apply bg-gradient-to-b from-[#00BAF4]/35 via-[#00BAF4]/10 to-[#00BAF4]/0 blur-[30px]
+                w-full max-w-[400px] h-[360px] absolute top-1/2 left-1/2
+                -translate-x-1/2 -translate-y-1/2 rotate-[45deg] -z-[1] rounded-full
+                ;
+            }
+
+            &:after {
+                content: "";
+                @apply bg-gradient-to-b from-[#00BAF4]/35 via-[#00BAF4]/10 to-[#00BAF4]/0 blur-[100px]
+                       w-full max-w-[400px] h-[180px] absolute -bottom-[100px] -right-[180px]
+                       -z-[1] rounded-full
+                ;
+            }
+        }
+
+    }
+}

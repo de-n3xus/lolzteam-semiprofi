@@ -1,7 +1,7 @@
 @layer components {
     section.advantages {
         @apply flex flex-row flex-wrap gap-[50px] 1180:gap-x-[100px] 1180:gap-y-[80px] place-items-stretch
-               py-[100px] items-center justify-items-center justify-center relative
+               py-[100px] items-center justify-items-center justify-center relative bg-[#08090B]
         ;
 
         &:before {
@@ -17,10 +17,10 @@
             @apply max-w-[100%] 670:max-w-[45%] 1180:max-w-[21%] w-full flex flex-col justify-center gap-0;
 
             .wrapper {
-                @apply max-w-[310px] w-full;
+                @apply max-w-[100%] 670:max-w-[310px] w-full text-center 670:text-left;
 
                 .icon {
-                    @apply w-[60px] h-[48px] border border-[#52C5FA] rounded-[4px] flex justify-center items-center;
+                    @apply w-[60px] h-[48px] border border-[#52C5FA] rounded-[4px] flex justify-center items-center mx-auto 670:mx-0;
 
                     img {
                         @apply w-[32px] h-[32px];
@@ -32,7 +32,7 @@
                 }
 
                 .desc {
-                    @apply text-[#464E62] text-[18px] italic mt-2 leading-[24px];
+                    @apply text-[#464E62] text-[18px] italic mt-2 leading-[24px] max-w-[310px] 670:max-w-[auto] mx-auto 670:mx-0;
                 }
             }
         }

@@ -1,0 +1,41 @@
+@layer components {
+    footer {
+        @apply w-full bg-[#08090B] pt-[100px] pb-[120px] px-8 770:px-[80px] 960:px-[160px] relative;
+
+        .wrapper {
+            @apply flex justify-center 680:justify-between flex-col 680:flex-row gap-x-8 gap-y-24;
+
+            .info {
+                @apply flex flex-col justify-center 680:justify-start gap-[48px];
+
+                img.logo {
+                    @apply h-[35px] mx-auto 680:mx-0;
+                }
+
+                .social {
+                    @apply flex justify-start flex-row gap-[16px] mx-auto 680:mx-0;
+
+                    img.ic {
+                        @apply w-[30px] h-[30px] hover:opacity-65 transition ease-linear duration-300;
+                    }
+                }
+
+                .buttons {
+                    @apply flex justify-center 680:justify-start items-center gap-3;
+                }
+            }
+
+            .links {
+                @apply flex flex-row justify-center 680:justify-end gap-[56px];
+
+                ul {
+                    @apply flex flex-col gap-4;
+
+                    li {
+                        @apply text-[#464E62] text-[18px] hover:opacity-65 transition ease-linear;
+                    }
+                }
+            }
+        }
+    }
+}
